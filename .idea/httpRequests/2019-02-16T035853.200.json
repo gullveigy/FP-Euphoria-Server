@@ -1,0 +1,12 @@
+{
+  "message": "Booklistcomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "_id": "5c6719fd0686232ec07a292b",
+    "date": "2019-02-15T19:58:53.001Z",
+    "username": "Suga",
+    "booklistname": "loveyourself answer",
+    "booklistid": "5c6710228ae46b2eec56db1f",
+    "__v": 0
+  }
+}

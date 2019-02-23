@@ -1,0 +1,13 @@
+{
+  "message": "Booklistcomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "_id": "5c671bbb6f09e31624098f35",
+    "date": "2019-02-15T20:06:19.088Z",
+    "username": "Suga",
+    "booklistname": "loveyourself answer",
+    "booklistid": "5c6710228ae46b2eec56db1f",
+    "comment": "At first sight, I could recognize you As if we were calling for each other The DNA in my blood vessels tell me That it’s you I was looking all over for.",
+    "__v": 0
+  }
+}

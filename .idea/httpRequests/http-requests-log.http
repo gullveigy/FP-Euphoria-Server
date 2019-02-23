@@ -1,0 +1,550 @@
+DELETE http://localhost:3000/books/5c69547a2a96c31274e58219
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Idol","date":"","author":"BTS"}
+
+<> 2019-02-17T083454.200.json
+
+###
+
+GET http://localhost:3000/5c6710228ae46b2eec56db1f/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Idol","date":"","author":"BTS"}
+
+<> 2019-02-17T083331.200.json
+
+###
+
+POST http://localhost:3000/5c6710228ae46b2eec56db1f/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Idol","date":"","author":"BTS"}
+
+<> 2019-02-17T083327.404.html
+
+###
+
+POST http://localhost:3000/booklist
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Idol","date":"","author":"BTS"}
+
+<> 2019-02-17T083300.200.json
+
+###
+
+POST http://localhost:3000/booklist
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Fake Love","date":"","author":"BTS"}
+
+<> 2019-02-17T083243.200.json
+
+###
+
+POST http://localhost:3000/booklist
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Just Dance","date":"","author":"JHope"}
+
+<> 2019-02-17T083154.200.json
+
+###
+
+POST http://localhost:3000/booklist
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c670fc58ae46b2eec56db1e","bookname":"Save me","date":"","author":"BTS"}
+
+<> 2019-02-17T083021.200.json
+
+###
+
+PUT http://localhost:3000/booklistcomment/5c671c466f09e31624098f36/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","booklistid":"5c6710638ae46b2eec56db20","booklistname":"Young Forever","comment":"Our meeting is like a mathematical formula Commandments of religion, providence of the universe; The evidence of destiny given to me You’re the source of my dream.","date":"","upvotes":0}
+
+<> 2019-02-16T041036.200.json
+
+###
+
+PUT http://localhost:3000/booklistcomment/5c671c466f09e31624098f36/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","booklistid":"5c6710638ae46b2eec56db20","booklistname":"Young Forever","comment":"Our meeting is like a mathematical formula Commandments of religion, providence of the universe; The evidence of destiny given to me You’re the source of my dream.","date":"","upvotes":0}
+
+<> 2019-02-16T041034.200.json
+
+###
+
+GET http://localhost:3000/5c6710638ae46b2eec56db20/comment
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","booklistid":"5c6710638ae46b2eec56db20","booklistname":"Young Forever","comment":"Our meeting is like a mathematical formula Commandments of religion, providence of the universe; The evidence of destiny given to me You’re the source of my dream.","date":"","upvotes":0}
+
+<> 2019-02-16T040954.200.json
+
+###
+
+POST http://localhost:3000/booklistcomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","booklistid":"5c6710638ae46b2eec56db20","booklistname":"Young Forever","comment":"Our meeting is like a mathematical formula Commandments of religion, providence of the universe; The evidence of destiny given to me You’re the source of my dream.","date":"","upvotes":0}
+
+<> 2019-02-16T040838.200.json
+
+###
+
+POST http://localhost:3000/booklistcomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","booklistname":"loveyourself answer","comment":"At first sight, I could recognize you As if we were calling for each other The DNA in my blood vessels tell me That it’s you I was looking all over for.","date":"","upvotes":0}
+
+<> 2019-02-16T040619.200.json
+
+###
+
+POST http://localhost:3000/booklistcomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","booklistname":"loveyourself answer","comment":"At first sight, I could recognize you As if we were calling for each other The DNA in my blood vessels tell me That it’s you I was looking all over for.","date":"","upvotes":0}
+
+<> 2019-02-16T040102.200.json
+
+###
+
+POST http://localhost:3000/booklistcomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","booklistname":"loveyourself answer","comment":"At first sight, I could recognize you As if we were calling for each other The DNA in my blood vessels tell me That it’s you I was looking all over for.","date":"","upvotes":0}
+
+<> 2019-02-16T035853.200.json
+
+###
+
+DELETE http://localhost:3000/booklistdir/5c67108e8ae46b2eec56db22
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"LoveYourself:Tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032507.200.json
+
+###
+
+PUT http://localhost:3000/booklistdir/5c670fc58ae46b2eec56db1e/changeName
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"LoveYourself:Tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032434.200.json
+
+###
+
+PUT http://localhost:3000/booklistdir/5c670fc58ae46b2eec56db1e/changeName
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"LoveYourself:Tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032346.200.json
+
+###
+
+PUT http://localhost:3000/booklistdir/5c670fc58ae46b2eec56db1e/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032255.200.json
+
+###
+
+PUT http://localhost:3000/booklistdir/5c670fc58ae46b2eec56db1e/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032251.200.json
+
+###
+
+GET http://localhost:3000/booklilstdir/5c670fc58ae46b2eec56db1e/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T032023.404.html
+
+###
+
+GET http://localhost:3000/booklilstdir/5c670fc58ae46b2eec56db1e
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031953.200.json
+
+###
+
+GET http://localhost:3000/Suga/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031929.200.json
+
+###
+
+POST http://localhost:3000/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"TaeTae","booklistname":"You Never Walk Alone","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031838.200.json
+
+###
+
+POST http://localhost:3000/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"JHope","booklistname":"Young Forever pt.2","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031807.200.json
+
+###
+
+POST http://localhost:3000/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"JHope","booklistname":"Young Forever","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031755.200.json
+
+###
+
+POST http://localhost:3000/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistname":"loveyourself answer","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031650.200.json
+
+###
+
+POST http://localhost:3000/booklistdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistname":"loveyourself tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031517.200.json
+
+###
+
+POST http://localhost:3000/booklilstdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistname":"loveyourself tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031508.404.html
+
+###
+
+POST http://localhost:3000/booklilstdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistname":"loveyourself tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T031030.200.json
+
+###
+
+POST http://localhost:3000/booklilstdir
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistname":"loveyourself tear","commentnumber":0,"date":"","upvotes":0}
+
+<> 2019-02-16T030844.200.json
+
+###
+
+GET http://localhost:3000/discomment/5c61c001ed7b692d2c1f39c0
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T031333.200.json
+
+###
+
+GET http://localhost:3000/5c609e20b8ed502f5c6a311d/discommentsinorder
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T031308.200.json
+
+###
+
+GET http://localhost:3000/5c609e20b8ed502f5c6a311d/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T030528.200.json
+
+###
+
+GET http://localhost:3000/5c609e50b8ed502f5c6a311d/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T030456.200.json
+
+###
+
+GET http://localhost:3000/5c609e50b8ed502f5c6a311e/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T030444.200.json
+
+###
+
+GET http://localhost:3000/5c609e50b8ed502f5c6a311e/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T030121.200.json
+
+###
+
+GET http://localhost:3000/5c609e50b8ed502f5c6a311e/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T030017.200.json
+
+###
+
+GET http://localhost:3000/5c609e50b8ed502f5c6a311e/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024737.200.json
+
+###
+
+GET http://localhost:3000/discomment/5c61c001ed7b692d2c1f39c0
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024453.200.json
+
+###
+
+GET http://localhost:3000/5c609e20b8ed502f5c6a311d/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024221.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c128ed7b692d2c1f39c2/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024129.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c128ed7b692d2c1f39c2/downvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024122.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c128ed7b692d2c1f39c2/downvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024120.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024045.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024044.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024040.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c001ed7b692d2c1f39c0/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024015.200.json
+
+###
+
+PUT http://localhost:3000/discomments/5c61c001ed7b692d2c1f39c0/upvote
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T024006.200.json
+
+###
+
+POST http://localhost:3000/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T023908.200.json
+
+###
+
+POST http://localhost:3000/discomments
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","discussionid":"5c609e20b8ed502f5c6a311d","content":"I grew a flower that can’t be bloomed in a dream that can’t come true","date":"","upvotes":0,"downvotes":0}
+
+<> 2019-02-12T023832.200.json
+
+###
+

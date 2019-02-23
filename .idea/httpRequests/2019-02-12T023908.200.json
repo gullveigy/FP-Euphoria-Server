@@ -1,0 +1,13 @@
+{
+  "message": "Discomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "downvotes": 0,
+    "_id": "5c61c14ced7b692d2c1f39c3",
+    "date": "2019-02-11T18:39:08.263Z",
+    "username": "RM",
+    "discussionid": "5c609e20b8ed502f5c6a311d",
+    "content": "I wish all my weaknesses could be hidden",
+    "__v": 0
+  }
+}

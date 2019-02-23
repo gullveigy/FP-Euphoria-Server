@@ -1,0 +1,12 @@
+{
+  "message": "Booklist Successfully Added!",
+  "data": {
+    "_id": "5c6953dd2a96c31274e58216",
+    "date": "2019-02-17T12:30:21.124Z",
+    "username": "Suga",
+    "booklistid": "5c670fc58ae46b2eec56db1e",
+    "bookname": "Save me",
+    "author": "BTS",
+    "__v": 0
+  }
+}

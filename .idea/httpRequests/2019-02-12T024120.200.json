@@ -1,0 +1,13 @@
+{
+  "message": "Discomment Successfully Upvoted!",
+  "data": {
+    "upvotes": 0,
+    "downvotes": 1,
+    "_id": "5c61c128ed7b692d2c1f39c2",
+    "date": "2019-02-11T18:38:32.075Z",
+    "username": "Suga",
+    "discussionid": "5c609e20b8ed502f5c6a311d",
+    "content": "I grew a flower that can’t be bloomed in a dream that can’t come true",
+    "__v": 0
+  }
+}

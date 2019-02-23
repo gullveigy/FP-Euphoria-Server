@@ -70,7 +70,19 @@ router.incrementUpvotes = (req, res) => {
             });
         }
     });
-}
+};
+
+
+router.deleteComment = (req, res) => {                                                                      //delete record             delete
+
+    Booklistcomment.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.status(404);
+            res.json({message: 'Booklistcomment NOT DELETED!', errmsg: err});
+        }else
+            res.json({ message: 'Booklistcomment Successfully Deleted!'});
+    });
+};
 
 
 

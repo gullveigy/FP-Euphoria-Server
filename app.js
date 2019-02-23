@@ -77,6 +77,8 @@ app.post('/booklistcomments',booklistcomments.addComment);
 
 app.put('/booklistcomment/:id/upvote', booklistcomments.incrementUpvotes);
 
+app.delete('/booklistcomment/:id', booklistcomments.deleteComment);
+
 
 
 //Users' booklist individual book

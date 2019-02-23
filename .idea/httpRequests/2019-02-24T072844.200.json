@@ -1,0 +1,20 @@
+[
+  {
+    "_id": "5c69543a2a96c31274e58217",
+    "date": "2019-02-17T12:31:54.646Z",
+    "username": "Suga",
+    "booklistid": "5c6710228ae46b2eec56db1f",
+    "bookname": "Just Dance",
+    "author": "JHope",
+    "__v": 0
+  },
+  {
+    "_id": "5c69546b2a96c31274e58218",
+    "date": "2019-02-17T12:32:43.236Z",
+    "username": "Suga",
+    "booklistid": "5c6710228ae46b2eec56db1f",
+    "bookname": "Fake Love",
+    "author": "BTS",
+    "__v": 0
+  }
+]

@@ -1,3 +1,14 @@
+GET http://localhost:3000/5c6710228ae46b2eec56db1f/books
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","booklistid":"5c6710228ae46b2eec56db1f","bookname":"Idol","date":"","author":"BTS"}
+
+<> 2019-02-24T072844.200.json
+
+###
+
 DELETE http://localhost:3000/booklistcomment/1100001
 Accept: */*
 Cache-Control: no-cache
@@ -534,17 +545,6 @@ Content-Type: application/json
 {"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
 
 <> 2019-02-12T024040.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c001ed7b692d2c1f39c0/upvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024015.200.json
 
 ###
 

@@ -55,6 +55,8 @@ app.post('/discomments',discomments.addDiscomment);
 app.put('/discomments/:id/upvote', discomments.incrementUpvotes);
 app.put('/discomments/:id/downvote', discomments.incrementDownvotes);
 
+app.delete('/discomments/:id', discomments.deleteDiscomment);
+
 
 
 //user's booklist dir

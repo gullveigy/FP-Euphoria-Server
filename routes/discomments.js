@@ -128,13 +128,26 @@ router.incrementDownvotes = (req, res) => {
             discomment.downvotes += 1;
             discomment.save(function (err) {
                 if (err)
-                    res.json({ message: 'Discomment NOT UpVoted!', errmsg : err } );
+                    res.json({ message: 'Discomment NOT DownVoted!', errmsg : err } );
                 else
-                    res.json({ message: 'Discomment Successfully Upvoted!', data: discomment });
+                    res.json({ message: 'Discomment Successfully Downvoted!', data: discomment });
             });
         }
     });
-}
+};
+
+
+
+router.deleteDiscomment = (req, res) => {                                                                      //delete record             delete
+
+    Discomment.findByIdAndRemove(req.params.id, function(err) {
+        if (err) {
+            res.status(404);
+            res.json({message: 'Discomment NOT DELETED!', errmsg: err});
+        }else
+            res.json({ message: 'Discomment Successfully Deleted!'});
+    });
+};
 
 
 

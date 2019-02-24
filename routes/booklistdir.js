@@ -55,7 +55,7 @@ router.addBooklist = (req, res) => {                                            
 
     booklistdir.username = req.body.username;
     booklistdir.booklistname = req.body.booklistname;
-    booklistdir.commentnumber = req.body.commentnumber;
+    
 
 
 

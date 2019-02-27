@@ -5,6 +5,20 @@ var Booklist = require('../models/booklists');
 var Users = require('../models/users');
 
 
+var mongodbUri ='mongodb://users:users777@ds247430.mlab.com:47430/seesawforwhat';
+mongoose.connect(mongodbUri);
+
+let db = mongoose.connection;
+
+db.on('error', function (err) {
+    console.log('Unable to Connect to [ ' + db.name + ' ]', err);
+});
+
+db.once('open', function () {
+    console.log('Successfully Connected to [ ' + db.name + ' ]');
+});
+
+
 router.findOne = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
@@ -22,7 +36,7 @@ router.addUser = (req, res) => {                                                
 
     res.setHeader('Content-Type', 'application/json');
 
-    var user = new User();
+    var user = new Users();
 
     user.username = req.body.username;
     user.email = req.body.email;

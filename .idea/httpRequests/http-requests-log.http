@@ -1,3 +1,58 @@
+GET http://localhost:3000/1804094746@qq.com/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"YingYan","email":"1804094745@qq.com","password":"qwert19970506","usertype":"common"}
+
+<> 2019-02-27T064118.200.json
+
+###
+
+GET http://localhost:3000/1804094745@qq.com/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"YingYan","email":"1804094745@qq.com","password":"qwert19970506","usertype":"common"}
+
+<> 2019-02-27T064106.200.json
+
+###
+
+POST http://localhost:3000/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"YingYan","email":"1804094745@qq.com","password":"qwert19970506","usertype":"common"}
+
+<> 2019-02-27T064031.200.json
+
+###
+
+POST http://localhost:3000/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","email":"1804094746@qq.com","password":"19970506","usertype":"common"}
+
+<> 2019-02-27T063929.200.json
+
+###
+
+POST http://localhost:3000/users
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","email":"1804094746@qq.com","password":"19970506","usertype":"common"}
+
+<> 2019-02-27T063736.500.json
+
+###
+
 GET http://localhost:3000/5c6710228ae46b2eec56db1f/books
 Accept: */*
 Cache-Control: no-cache
@@ -490,61 +545,6 @@ Content-Type: application/json
 {"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
 
 <> 2019-02-12T024129.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c128ed7b692d2c1f39c2/downvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024122.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c128ed7b692d2c1f39c2/downvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024120.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024045.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024044.200.json
-
-###
-
-PUT http://localhost:3000/discomments/5c61c0a4ed7b692d2c1f39c1/upvote
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"RM","discussionid":"5c609e20b8ed502f5c6a311d","content":"I wish all my weaknesses could be hidden","date":"","upvotes":0,"downvotes":0}
-
-<> 2019-02-12T024040.200.json
 
 ###
 

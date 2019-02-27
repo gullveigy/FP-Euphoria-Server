@@ -1,0 +1,15 @@
+<h1>User is not defined</h1>
+<h2></h2>
+<pre>ReferenceError: User is not defined
+at router.addUser (F: \ELFfound\elfserver\routes\users.js: 39: 16)
+at Layer.handle [as handle_request] (F: \ELFfound\elfserver\node_modules\express\lib\router\layer.js: 95: 5)
+at next (F: \ELFfound\elfserver\node_modules\express\lib\router\route.js: 137: 13)
+at Route.dispatch (F: \ELFfound\elfserver\node_modules\express\lib\router\route.js: 112: 3)
+at Layer.handle [as handle_request] (F: \ELFfound\elfserver\node_modules\express\lib\router\layer.js: 95: 5)
+at F: \ELFfound\elfserver\node_modules\express\lib\router\index.js: 281:22
+at Function.process_params (F: \ELFfound\elfserver\node_modules\express\lib\router\index.js:335: 12)
+at Immediate.next (F: \ELFfound\elfserver\node_modules\express\lib\router\index.js: 275: 10)
+at Immediate.&lt;anonymous&gt; (F: \ELFfound\elfserver\node_modules\express\lib\router\index.js: 635: 15)
+at runCallback (timers.js: 812:20)
+at tryOnImmediate (timers.js: 768: 5)
+at processImmediate [as _immediateCallback] (timers.js: 745: 5)</pre>

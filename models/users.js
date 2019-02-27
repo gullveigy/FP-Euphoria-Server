@@ -7,18 +7,15 @@ let UserSchema = new mongoose.Schema({
             required: true,
             trim: true
         },
+        email: {
+            type: String,
+            required: true,
+        },
         password: {
             type: String,
             required: true,
         },
-        usertype: String,
-        actions:{
-            upvotefor:{type:String,default:""},
-            comment:{
-                commentfor:[],
-                content:[]
-            }
-        }
+        usertype: String
     },
 
     { collection: 'user' });

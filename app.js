@@ -12,6 +12,7 @@ const discomments = require("./routes/discomments");
 const booklistdir = require("./routes/booklistdir");
 const booklistcomments = require("./routes/booklistcomments");
 const booklists = require("./routes/booklists");
+const users = require("./routes/users");
 
 var app = express();
 
@@ -89,6 +90,13 @@ app.get('/:booklistid/books', booklists.findUserBooklistAll);
 app.post('/booklist',booklists.addBook);
 
 app.delete('/books/:id', booklists.deleteBook);
+
+
+//User
+app.get('/:email/user', users.findOne);
+
+app.post('/users',users.addUser);
+
 
 
 

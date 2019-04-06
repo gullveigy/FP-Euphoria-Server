@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -13,6 +14,8 @@ const booklistdir = require("./routes/booklistdir");
 const booklistcomments = require("./routes/booklistcomments");
 const booklists = require("./routes/booklists");
 const users = require("./routes/users");
+const admins =require("./routes/admins");
+const contact = require("./routes/contact");
 
 var app = express();
 
@@ -24,15 +27,21 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 
+
 //discussions api routes
+app.get('/alldiscussions', discussions.findAllDiscussions);
+app.get('/alldiscussions/sortbydate', discussions.findAllindateorder);
+app.get('/alldiscussions/sortbyvote', discussions.findAllinvotesorder);
 app.get('/:bookname/discussions', discussions.findBookDiscussionAll);
 app.get('/discussions/:id', discussions.findOne);
+app.get('/userdiscussions/:email', discussions.findUserDis);
 app.get('/fuzzysearch/:content/discussions', discussions.fuzzysearchDiscussion);
 app.get('/:bookname/discussionsinorder', discussions.findBookDisindateorder);
 app.get('/fuzzydateorder/:content', discussions.findQueryindateorder);
@@ -63,6 +72,7 @@ app.delete('/discomments/:id', discomments.deleteDiscomment);
 //user's booklist dir
 app.get('/:username/booklistdir', booklistdir.findUserbooklistdirAll);
 app.get('/booklilstdir/:id', booklistdir.findOne);
+app.get('/userbooklilstdir/:email', booklistdir.findOneByEmail);
 
 app.post('/booklistdir',booklistdir.addBooklist);
 
@@ -92,12 +102,28 @@ app.post('/booklist',booklists.addBook);
 app.delete('/books/:id', booklists.deleteBook);
 
 
+//Contact
+app.post('/contacts',contact.addContact);
+
+app.get('/allcontacts/sortbydate', contact.findAllindateorder);
+
+
 //User
+app.get('/users', users.findAllusers);
+
 app.get('/:email/user', users.findOne);
+
+app.get('/find/:username/user', users.findOneByname);
+
+app.put('/currentuser/:id/follow', users.incrementFollow);
 
 app.post('/users',users.addUser);
 
 
+//Admin
+app.post('/admins',admins.addAdmin);
+
+app.get('/admins', admins.findAlladmins);
 
 
 

@@ -1,0 +1,13 @@
+{
+  "message": "User Successfully Followed!",
+  "data": {
+    "followers": 2,
+    "_id": "5c76fc11acee55353cd72d11",
+    "username": "JungforTest",
+    "email": "18819160327@qq.com",
+    "password": "19970506",
+    "usertype": "common",
+    "signature": "Did not write anything",
+    "__v": 0
+  }
+}

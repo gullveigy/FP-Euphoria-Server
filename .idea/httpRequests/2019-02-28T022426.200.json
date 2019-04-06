@@ -1,0 +1,11 @@
+{
+  "message": "User Successfully Added!",
+  "data": {
+    "_id": "5c76d5da9e465d13801c9402",
+    "username": "Yy",
+    "email": "1114094745@qq.com",
+    "password": "19970506",
+    "usertype": "common",
+    "__v": 0
+  }
+}

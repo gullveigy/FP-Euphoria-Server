@@ -1,0 +1,13 @@
+{
+  "message": "Booklistcomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "_id": "5c7d103f1434553b4c3790b3",
+    "date": "2019-03-04T11:47:11.104Z",
+    "username": "Agust D",
+    "booklistname": "Love Maze",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "comment": "Cypher3: Killer is almost my life song. Zzang.",
+    "__v": 0
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "message": "Booklistcomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "_id": "5c7d10d91434553b4c3790b4",
+    "date": "2019-03-04T11:49:45.358Z",
+    "username": "Suran",
+    "booklistname": "Love Maze",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "comment": "I think 'Ddaeng' can also be a good name for this awesome booklist. Don't you think?",
+    "__v": 0
+  }
+}

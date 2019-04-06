@@ -1,0 +1,13 @@
+{
+  "message": "Booklistcomment Successfully Added!",
+  "data": {
+    "upvotes": 0,
+    "_id": "5c7d11c01434553b4c3790b5",
+    "date": "2019-03-04T11:53:36.982Z",
+    "username": "Somi Kwon",
+    "booklistname": "Love Maze",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "comment": "These are the books BTS recommended before right?",
+    "__v": 0
+  }
+}

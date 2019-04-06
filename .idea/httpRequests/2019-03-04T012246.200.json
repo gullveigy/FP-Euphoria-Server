@@ -1,0 +1,12 @@
+{
+  "message": "Booklist Successfully Added!",
+  "data": {
+    "_id": "5c7c0d666ff1403c4c077341",
+    "date": "2019-03-03T17:22:46.443Z",
+    "username": "Agust D",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "bookname": "MissRight",
+    "author": "JK Republic",
+    "__v": 0
+  }
+}

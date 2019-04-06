@@ -1,0 +1,12 @@
+{
+  "message": "Booklist Successfully Added!",
+  "data": {
+    "_id": "5c7c15056ff1403c4c077343",
+    "date": "2019-03-03T17:55:17.086Z",
+    "username": "Agust D",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "bookname": "Her",
+    "author": "PDdogg",
+    "__v": 0
+  }
+}

@@ -46,6 +46,19 @@ router.findOne = (req, res) => {
 };
 
 
+router.findOneByEmail = (req, res) => {
+
+    res.setHeader('Content-Type', 'application/json');
+
+    Booklistdir.find({ "email" : req.params.email },function(err, booklistdir) {
+        if (err)
+            res.json({ message: 'Booklistdir NOT Found!', errmsg : err } );
+        else
+            res.send(JSON.stringify(booklistdir,null,5));
+    });
+};
+
+
 
 router.addBooklist = (req, res) => {                                                                   //post record               post
 
@@ -54,8 +67,9 @@ router.addBooklist = (req, res) => {                                            
     var booklistdir = new Booklistdir();
 
     booklistdir.username = req.body.username;
+    booklistdir.email = req.body.email;
     booklistdir.booklistname = req.body.booklistname;
-    
+
 
 
 

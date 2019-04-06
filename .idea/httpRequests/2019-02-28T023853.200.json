@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "5c7668e07128fc2bd85a5cbe",
+    "username": "Suga",
+    "email": "1804094746@qq.com",
+    "password": "19970506",
+    "usertype": "common",
+    "__v": 0
+  },
+  {
+    "_id": "5c76691e7128fc2bd85a5cbf",
+    "username": "YingYan",
+    "email": "1804094745@qq.com",
+    "password": "qwert19970506",
+    "usertype": "common",
+    "__v": 0
+  },
+  {
+    "_id": "5c76d5da9e465d13801c9402",
+    "username": "Yy",
+    "email": "1114094745@qq.com",
+    "password": "19970506",
+    "usertype": "common",
+    "__v": 0
+  }
+]

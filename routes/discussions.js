@@ -18,6 +18,55 @@ db.once('open', function () {
     console.log('Successfully Connected to [ ' + db.name + ' ]');
 });
 
+
+router.findAllDiscussions = (req, res) => {                                                                               //findall                 get
+    // Return a JSON representation of our list
+    res.setHeader('Content-Type', 'application/json');
+
+    Discussion.find(function(err, discussions) {
+        if (err)
+            res.send(err);
+
+        res.send(JSON.stringify(discussions,null,5));
+    });
+};
+
+
+
+router.findAllindateorder = (req, res) => {                                                                               //findall                 get
+    // Return a JSON representation of our list
+    res.setHeader('Content-Type', 'application/json');
+
+    Discussion.find(function(err, discussions) {
+        if (err)
+            res.send(err);
+        else {
+            var list = discussions.sort(compare("date"));
+
+            res.send(JSON.stringify(list, null, 5));
+        }
+    });
+};
+
+
+
+router.findAllinvotesorder = (req, res) => {                                                                               //findall                 get
+    // Return a JSON representation of our list
+    res.setHeader('Content-Type', 'application/json');
+
+    Discussion.find(function(err, discussions) {
+        if (err)
+            res.send(err);
+        else {
+            var list = discussions.sort(compare("upvotes"));
+
+            res.send(JSON.stringify(list, null, 5));
+        }
+    });
+};
+
+
+
 router.findBookDiscussionAll = (req, res) => {                                                                               //findall                 get
     // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
@@ -43,7 +92,7 @@ router.findBookDisindateorder = (req, res) => {                                 
             res.send(JSON.stringify(list, null, 5));
         }
     });
-}
+};
 
 
 
@@ -58,7 +107,22 @@ router.findOne = (req, res) => {
         else
             res.send(JSON.stringify(discussion,null,5));
     });
-}
+};
+
+
+
+router.findUserDis = (req, res) => {
+
+    res.setHeader('Content-Type', 'application/json');
+
+    Discussion.find({ "email" : req.params.email },function(err, discussion) {
+        if (err)
+            res.json({ message: 'Discussion NOT Found!', errmsg : err } );
+        else
+            res.send(JSON.stringify(discussion,null,5));
+    });
+};
+
 
 function getTotalVotes(array) {
     let totalVotes = 0;
@@ -69,7 +133,7 @@ function getTotalVotes(array) {
 function compare(str) {
     return function(obj1, obj2) {
         var value2 = obj1[str];
-        var value1 = obj2[str]
+        var value1 = obj2[str];
         if (value2 < value1) {
             return 1;
         } else if (value2 > value1) {
@@ -106,7 +170,7 @@ router.findQueryindateorder = (req, res) => {                                   
             res.send(JSON.stringify(list, null, 5));
         }
     });
-}
+};
 
 
 router.findQueryinvotesorder = (req, res) => {                                                                               //findall                 get
@@ -122,7 +186,7 @@ router.findQueryinvotesorder = (req, res) => {                                  
             res.send(JSON.stringify(list, null, 5));
         }
     });
-}
+};
 
 
 router.incrementUpvotes = (req, res) => {
@@ -150,8 +214,10 @@ router.addDiscussion = (req, res) => {                                          
     var discussion = new Discussion();
 
     discussion.username = req.body.username;
+    discussion.email = req.body.email;
     discussion.bookname = req.body.bookname;
     discussion.content = req.body.content;
+    discussion.title = req.body.title;
 
 
     discussion.save(function(err) {

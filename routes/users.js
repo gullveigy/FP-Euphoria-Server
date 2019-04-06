@@ -1,7 +1,6 @@
 let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
-var Booklist = require('../models/booklists');
 var Users = require('../models/users');
 
 
@@ -19,11 +18,40 @@ db.once('open', function () {
 });
 
 
+
+router.findAllusers = (req, res) => {                                                                               //findall                 get
+    // Return a JSON representation of our list
+    res.setHeader('Content-Type', 'application/json');
+
+    Users.find(function(err, users) {
+        if (err)
+            res.send(err);
+
+        res.send(JSON.stringify(users,null,5));
+    });
+};
+
+
+
 router.findOne = (req, res) => {
 
     res.setHeader('Content-Type', 'application/json');
 
     Users.find({ "email" : req.params.email },function(err, user) {
+        if (err)
+            res.json({ message: 'User NOT Found!', errmsg : err } );
+        else
+            res.send(JSON.stringify(user,null,5));
+    });
+};
+
+
+
+router.findOneByname = (req, res) => {
+
+    res.setHeader('Content-Type', 'application/json');
+
+    Users.find({ "username" : req.params.username },function(err, user) {
         if (err)
             res.json({ message: 'User NOT Found!', errmsg : err } );
         else
@@ -42,6 +70,7 @@ router.addUser = (req, res) => {                                                
     user.email = req.body.email;
     user.password = req.body.password;
     user.usertype = req.body.usertype;
+    user.signature = req.body.signature;
 
 
 
@@ -54,6 +83,28 @@ router.addUser = (req, res) => {                                                
             res.json({ message: 'User Successfully Added!', data: user });
     });
 };
+
+
+router.incrementFollow = (req, res) => {
+
+    Users.findById(req.params.id, function(err,user) {
+        if (err)
+            res.json({ message: 'User NOT Found!', errmsg : err } );
+        else {
+            user.followers += 1;
+            user.save(function (err) {
+                if (err)
+                    res.json({ message: 'User NOT Followed!', errmsg : err } );
+                else
+                    res.json({ message: 'User Successfully Followed!', data: user });
+            });
+        }
+    });
+};
+
+
+
+
 
 
 

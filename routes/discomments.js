@@ -49,7 +49,7 @@ router.findOne = (req, res) => {
 function compare(str) {
     return function(obj1, obj2) {
         var value2 = obj1[str];
-        var value1 = obj2[str]
+        var value1 = obj2[str];
         if (value2 < value1) {
             return 1;
         } else if (value2 > value1) {

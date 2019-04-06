@@ -1,0 +1,12 @@
+{
+  "message": "Booklist Successfully Added!",
+  "data": {
+    "_id": "5c7c0d396ff1403c4c077340",
+    "date": "2019-03-03T17:22:01.200Z",
+    "username": "Agust D",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "bookname": "NeverMind",
+    "author": "Suga Min",
+    "__v": 0
+  }
+}

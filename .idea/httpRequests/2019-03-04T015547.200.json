@@ -1,0 +1,12 @@
+{
+  "message": "Booklist Successfully Added!",
+  "data": {
+    "_id": "5c7c15236ff1403c4c077344",
+    "date": "2019-03-03T17:55:47.718Z",
+    "username": "Agust D",
+    "booklistid": "5c7ad06a7f462517b417fdcb",
+    "bookname": "Cypher3 : Killer",
+    "author": "SuperPoi",
+    "__v": 0
+  }
+}

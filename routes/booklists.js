@@ -29,7 +29,7 @@ router.findUserBooklistAll = (req, res) => {                                    
         if (err)
             res.send(err);
 
-        res.send(JSON.stringify(booklists,null,5));
+        res.send(booklists,null,5);
     });
 };
 

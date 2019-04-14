@@ -1,6 +1,8 @@
 let mongoose = require('mongoose');
-let DiscussionSchema = new mongoose.Schema({
-        username: String,
+let CollectedDiscussionSchema = new mongoose.Schema({
+        collectemail: String,
+        discussionid: String,
+        author: String,
         title: String,
         bookname:String,
         content:String,
@@ -9,7 +11,6 @@ let DiscussionSchema = new mongoose.Schema({
         upvotes:{type: Number, default: 0},
         collect: {type: Number, default: 0}
 
-
     },
-    { collection: 'discussion' });
-module.exports = mongoose.model('Discussion', DiscussionSchema);
+    { collection: 'collecteddiscussion' });
+module.exports = mongoose.model('CollectedDiscussion', CollectedDiscussionSchema);

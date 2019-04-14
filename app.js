@@ -16,6 +16,8 @@ const booklists = require("./routes/booklists");
 const users = require("./routes/users");
 const admins =require("./routes/admins");
 const contact = require("./routes/contact");
+const pay = require("./routes/pay");
+const collecteddiscussions = require("./routes/collecteddiscussions");
 
 var app = express();
 
@@ -51,8 +53,18 @@ app.post('/discussions',discussions.addDiscussion);
 
 app.put('/discussions/:id/edit', discussions.changeDiscussion);
 app.put('/discussions/:id/vote', discussions.incrementUpvotes);
+app.put('/discussions/:id/collect', discussions.incrementCollection);
 
 app.delete('/discussions/:id', discussions.deleteDiscussion);
+
+
+
+//collecteddiscussions api routes
+app.get('/userdiscussions/collected/:collectemail', collecteddiscussions.findUserCollection);
+
+app.post('/collecteddiscussions',collecteddiscussions.addCollectedDiscussion);
+
+app.delete('/collecteddiscussions/:id', collecteddiscussions.deleteCollectedDiscussion);
 
 
 //discomments api routes
@@ -106,6 +118,9 @@ app.delete('/books/:id', booklists.deleteBook);
 app.post('/contacts',contact.addContact);
 
 app.get('/allcontacts/sortbydate', contact.findAllindateorder);
+
+//payment
+app.post('/pay', pay.pay);
 
 
 //User

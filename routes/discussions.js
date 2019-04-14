@@ -207,6 +207,24 @@ router.incrementUpvotes = (req, res) => {
 };
 
 
+router.incrementCollection = (req, res) => {
+
+    Discussion.findById(req.params.id, function(err,discussion) {
+        if (err)
+            res.json({ message: 'Discussion NOT Found!', errmsg : err } );
+        else {
+            discussion.collect += 1;
+            discussion.save(function (err) {
+                if (err)
+                    res.json({ message: 'Discussion NOT Collected!', errmsg : err } );
+                else
+                    res.json({ message: 'Discussion Successfully Collected!', data: discussion });
+            });
+        }
+    });
+};
+
+
 router.addDiscussion = (req, res) => {                                                                   //post record               post
 
     res.setHeader('Content-Type', 'application/json');

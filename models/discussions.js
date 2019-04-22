@@ -5,6 +5,7 @@ let DiscussionSchema = new mongoose.Schema({
         bookname:String,
         content:String,
         email: String,
+        file: String,
         date:{type: Date, default:Date.now},
         upvotes:{type: Number, default: 0},
         collect: {type: Number, default: 0}

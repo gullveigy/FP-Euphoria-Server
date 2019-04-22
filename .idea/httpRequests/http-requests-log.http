@@ -1,3 +1,14 @@
+GET http://localhost:3000/find/Agust%20D/user
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Suga","email":"1777123423@qq.com","phonenumber":"13260908179","content":"Ohlalalalalalala","date":""}
+
+<> 2019-04-20T060741.200.json
+
+###
+
 GET http://localhost:3000/fuzzysearch/o/discussions
 Accept: */*
 Cache-Control: no-cache
@@ -518,15 +529,6 @@ Content-Type: application/json
 {"username":"Yy","email":"1114094745@qq.com","password":"19970506","usertype":"common"}
 
 <> 2019-02-28T023853.200.json
-
-###
-
-GET http://localhost:3000/users
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Yy","email":"1114094745@qq.com","password":"19970506","usertype":"common"}
 
 ###
 

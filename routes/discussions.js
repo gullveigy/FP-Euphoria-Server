@@ -148,7 +148,7 @@ function compare(str) {
 router.fuzzysearchDiscussion = (req, res) => {                                                            //通过的description查找记录，fuzzysearch    get
     res.setHeader('Content-Type', 'application/json');
     //var keyword = {'description': {$regex:req.params.description, $options:'i'}};
-    Discussion.find({'content':{$regex:req.params.content, $options:'i'}}, function(err,discussion) {
+    Discussion.find({'bookname':{$regex:req.params.bookname, $options:'i'}}, function(err,discussion) {
         if (discussion.length <= 0)
             res.json({Message: 'Sorry! Cannot find this discussion by this message!'});
         else
@@ -236,6 +236,7 @@ router.addDiscussion = (req, res) => {                                          
     discussion.bookname = req.body.bookname;
     discussion.content = req.body.content;
     discussion.title = req.body.title;
+    discussion.file = req.body.file;
 
 
     discussion.save(function(err) {

@@ -1,6 +1,6 @@
 let mongoose = require('mongoose');
 
-let UserSchema = new mongoose.Schema({
+let ShoppingCartSchema = new mongoose.Schema({
         username: {
             type: String,
             unique: true,
@@ -15,12 +15,8 @@ let UserSchema = new mongoose.Schema({
             type: String,
             required: true,
         },
-        signature: String,
-        usertype: String,
-        followers: {type: Number, default: 0},
-        avatar: String
+        usertype: String
     },
 
-    { collection: 'user' });
-module.exports = mongoose.model('User', UserSchema);
-
+    { collection: 'shoppingCart' });
+module.exports = mongoose.model('ShoppingCart', ShoppingCartSchema);

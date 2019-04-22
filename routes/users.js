@@ -2,7 +2,9 @@ let express = require('express');
 let router = express.Router();
 let mongoose = require('mongoose');
 var Users = require('../models/users');
-
+var fs = require("fs");
+var formidable = require("formidable"); 
+var path = require('path');
 
 var mongodbUri ='mongodb://users:users777@ds247430.mlab.com:47430/seesawforwhat';
 mongoose.connect(mongodbUri);
@@ -72,9 +74,6 @@ router.addUser = (req, res) => {                                                
     user.usertype = req.body.usertype;
     user.signature = req.body.signature;
 
-
-
-
     user.save(function(err) {
         if (err)
             res.json({ message: 'User NOT Added!', errmsg : err } );
@@ -102,12 +101,51 @@ router.incrementFollow = (req, res) => {
     });
 };
 
+router.uploadAvatarUrl = (req, res) => {
+    res.setHeader('Content-Type', 'application/json');
+
+    let form = new formidable.IncomingForm();
+    form.uploadDir = path.join(__dirname,'../public/images');
+    form.keepExtensions = true;
+    form.maxFieldSize = 1*1024*1024;
+    form.parse(req, function(err, fields, files) {
+        if(err) {
+            res.json({ message: 'Upload fail!', errmsg : err } );
+        }
+        console.log('fields',fields); //表单传递的input数据
+        console.log('files',files); //上传文件数据
+        console.log('files.file.path', files.avatar.path)
+        console.log( 'basepath', path.basename(files.avatar.path))
 
 
+        if(!fields.id) {
+            res.json({ message: 'No UserId!', errmsg : err } );
+        }
 
+        let conditions = {_id: fields.id};
 
+        Users.findOne(conditions,function(err, user) {
+            if(user.avatar) {
+                fs.unlink('/images/' + user.avatar, ( result ) => {
+                    console.log( result )
+                });
+            }
+        });
 
+        let updates = {$set: {avatar: path.basename(files.avatar.path)}}; 
+        Users.findByIdAndUpdate(conditions,updates, {new: true}, function( error, data ){
+            console.log( data )
+            if (error) {
+                console.error(error);
+                res.json({ message: 'No UserId!', errmsg : error } );
 
+            } else {
+                console.error("更新成功")
+                res.json({ message: 'Upload avatar success!', data: data });
+            }          
+        });
+    });
 
+}
 
 module.exports = router;

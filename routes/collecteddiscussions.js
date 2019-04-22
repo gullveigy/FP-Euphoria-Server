@@ -48,6 +48,7 @@ router.addCollectedDiscussion = (req, res) => {                                 
     collecteddiscussion.bookname = req.body.bookname;
     collecteddiscussion.content = req.body.content;
     collecteddiscussion.title = req.body.title;
+    collecteddiscussion.file = req.body.file;
 
 
     collecteddiscussion.save(function(err) {

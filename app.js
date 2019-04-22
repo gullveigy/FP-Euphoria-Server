@@ -18,6 +18,7 @@ const admins =require("./routes/admins");
 const contact = require("./routes/contact");
 const pay = require("./routes/pay");
 const collecteddiscussions = require("./routes/collecteddiscussions");
+const order = require("./routes/order");
 
 var app = express();
 
@@ -44,7 +45,7 @@ app.get('/alldiscussions/sortbyvote', discussions.findAllinvotesorder);
 app.get('/:bookname/discussions', discussions.findBookDiscussionAll);
 app.get('/discussions/:id', discussions.findOne);
 app.get('/userdiscussions/:email', discussions.findUserDis);
-app.get('/fuzzysearch/:content/discussions', discussions.fuzzysearchDiscussion);
+app.get('/fuzzysearch/:bookname/discussions', discussions.fuzzysearchDiscussion);
 app.get('/:bookname/discussionsinorder', discussions.findBookDisindateorder);
 app.get('/fuzzydateorder/:content', discussions.findQueryindateorder);
 app.get('/fuzzyvoteorder/:content', discussions.findQueryinvotesorder);
@@ -134,6 +135,9 @@ app.put('/currentuser/:id/follow', users.incrementFollow);
 
 app.post('/users',users.addUser);
 
+app.post('/uploadavatarurl', users.uploadAvatarUrl)
+
+
 
 //Admin
 app.post('/admins',admins.addAdmin);
@@ -141,6 +145,14 @@ app.post('/admins',admins.addAdmin);
 app.get('/admins', admins.findAlladmins);
 
 
+// order
+app.post('/createorder', order.createOrder);
+
+app.post('/updatestatus', order.setOrderStatus);
+
+app.get('/orderlist/:pageSize/:currentPage/:username', order.findUserOrderAll);
+
+app.get('/ordersearch/:pageSize/:currentPage/:keyword', order.fuzzySearch)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

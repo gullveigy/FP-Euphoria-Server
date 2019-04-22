@@ -5,9 +5,6 @@ let BooklistSchema = new mongoose.Schema({
         bookname:String,
         author:String,
         date:{type: Date, default:Date.now}
-
-
-
     },
     { collection: 'booklist' });
 module.exports = mongoose.model('Booklist', BooklistSchema);

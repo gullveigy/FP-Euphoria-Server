@@ -19,19 +19,26 @@ let OrderSchema = new mongoose.Schema({
             type: String,
             required: true,
         },
-        bookname: {
-            type: String,
-            required: true
-        },
-        bookcover: {
-            type: String,
-            required: true,
-        },
-        authors: [String],
-        price: {
-            type: String,
-            required: true,
-        },
+        bookList: [{
+            bookname: String,
+            bookcover: String,
+            authors: [String],
+            price: String,
+            num: Number
+        }],
+        // bookname: {
+        //     type: String,
+        //     required: true
+        // },
+        // bookcover: {
+        //     type: String,
+        //     required: true,
+        // },
+        // authors: [String],
+        // price: {
+        //     type: String,
+        //     required: true,
+        // },
         createtime: {
             type: Date,
             default: Date.now

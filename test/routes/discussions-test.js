@@ -12,10 +12,14 @@ describe('Discussions', function (){
         it('should return confirmation message and update database', function(done) {
             let discussion = {
                 username: 'RM',
+                email: '18817192034@qq.com',
                 bookname: 'Just Test',
+                title: 'JUST TEST',
                 content: 'Test for it',
+                file: 'image/jpeg;base64,/9j/4AAQSkZ',
                 date:'',
-                upvotes:0
+                upvotes:0,
+                collect: 0
 
             };
             chai.request(server)
@@ -187,18 +191,18 @@ describe('Discussions', function (){
     describe('GET /:bookname/discussions',  () => {
         it('should return all the discussions of this book in an array', function(done) {
             chai.request(server)
-                .get('/Love Youself/discussions')
+                .get('/IDOL/discussions')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(2);
+                    expect(res.body.length).to.equal(1);
                     let result = _.map(res.body, (discussion) => {
                         return { username: discussion.username,
                             upvotes: discussion.upvotes }
                     });
                     //expect(result).to.include( { username: 'V', upvotes: 3 });
-                    expect(result).to.include( { username: 'Suga', upvotes: 1 });
-                    expect(result).to.include( { username: 'Suga', upvotes: 0 });
+                    //expect(result).to.include( { username: 'Suga', upvotes: 1 });
+                    expect(result).to.include( { username: 'Test1', upvotes: 5 });
                     done();
                 });
 
@@ -209,7 +213,7 @@ describe('Discussions', function (){
     describe('GET /discussions/:id',  () => {
         it('should return the discussion with this id in an array', function(done) {
             chai.request(server)
-                .get('/discussions/5c609e50b8ed502f5c6a311e')
+                .get('/discussions/5cb8805ef6446b2fc49322f1')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
@@ -218,7 +222,7 @@ describe('Discussions', function (){
                         return { username: discussion.username,
                             upvotes: discussion.upvotes }
                     });
-                    expect(result).to.include( { username: 'Suga', upvotes: 0 });
+                    expect(result).to.include( { username: 'Test1', upvotes: 5 });
                     //expect(result).to.include( { username: 'Suga', upvotes: 1 });
                     //expect(result).to.include( { username: 'RM', upvotes: 0 });
                     done();
@@ -238,10 +242,10 @@ describe('Discussions', function (){
 
 
 
-    describe('GET /fuzzysearch/:content/discussions',  () => {
+    describe('GET /fuzzysearch/:bookname/discussions',  () => {
         it('should return relevant records matching the fuzzy description in an array', function(done) {
             chai.request(server)
-                .get('/fuzzysearch/same hand/discussions')
+                .get('/fuzzysearch/DO/discussions')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
@@ -251,7 +255,7 @@ describe('Discussions', function (){
                             upvotes: discussion.upvotes }
                     });
                     expect(result).to.include(
-                        { username: 'Suga', upvotes: 1 }
+                        { username: 'Test1', upvotes: 5 }
                     );
                     //expect(result).to.include( { description: "Acide Hyaluronique", amount: 6.95  } );
                     //expect(result).to.include( { description: "Facteurs Naturels", amount: 5.95  } );
@@ -277,18 +281,18 @@ describe('Discussions', function (){
     describe('GET /:bookname/discussionsinorder',  () => {
         it('should return all the discussions of one book in date order in an array', function(done) {
             chai.request(server)
-                .get('/Wings/discussionsinorder')
+                .get('/Young Forever/discussionsinorder')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(2);
+                    expect(res.body.length).to.equal(1);
                     let result = _.map(res.body, (discussion) => {
                         return { username: discussion.username,
                             upvotes: discussion.upvotes }
                     });
                     expect(result).to.include(
-                        { username:'Krystal', upvotes:0 },
-                        { username:'Hope', upvotes:0 });
+                        { username:'Agust D', upvotes:1 }
+                        );
                     //expect(result).to.include( { username: 'Suga', upvotes: 1 });
                     //expect(result).to.include( { username: 'RM', upvotes: 0 });
                     done();
@@ -301,20 +305,17 @@ describe('Discussions', function (){
     describe('GET /fuzzydateorder/:content',  () => {
         it('should return all the releted discussions in date order by fuzzy search in an array', function(done) {
             chai.request(server)
-                .get('/fuzzydateorder/we')
+                .get('/fuzzydateorder/(artist)')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(4);
+                    expect(res.body.length).to.equal(1);
                     let result = _.map(res.body, (discussion) => {
                         return { username: discussion.username,
                             upvotes: discussion.upvotes }
                     });
                     expect(result).to.include(
-                        { username:'Suga', upvotes:0 },
-                        { username:'Suga', upvotes:1 },
-                        { username:'Krystal', upvotes:0 },
-                        { username:'Hope', upvotes:0 })
+                        { username:'Test1', upvotes:5 });
                     //expect(result).to.include( { username: 'Suga', upvotes: 1 });
                     //expect(result).to.include( { username: 'RM', upvotes: 0 });
                     done();
@@ -328,20 +329,18 @@ describe('Discussions', function (){
     describe('GET /fuzzyvoteorder/:content',  () => {
         it('should return all the releted discussions in vote order by fuzzy search in an array', function(done) {
             chai.request(server)
-                .get('/fuzzydateorder/we')
+                .get('/fuzzydateorder/you are')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(4);
+                    expect(res.body.length).to.equal(2);
                     let result = _.map(res.body, (discussion) => {
                         return { username: discussion.username,
                             upvotes: discussion.upvotes }
                     });
                     expect(result).to.include(
-                        { username:'Suga', upvotes:1 },
-                        { username:'Suga', upvotes:0 },
-                        { username:'Krystal', upvotes:0 },
-                        { username:'Hope', upvotes:0 })
+                        { username:'Agust D', upvotes:1 },
+                        { username:'Agust D', upvotes:0 });
                     //expect(result).to.include( { username: 'Suga', upvotes: 1 });
                     //expect(result).to.include( { username: 'RM', upvotes: 0 });
                     done();

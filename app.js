@@ -19,6 +19,9 @@ const contact = require("./routes/contact");
 const pay = require("./routes/pay");
 const collecteddiscussions = require("./routes/collecteddiscussions");
 const order = require("./routes/order");
+const follow = require("./routes/follow");
+const shoppingCar = require("./routes/shoppingCart.js");
+
 
 var app = express();
 
@@ -124,6 +127,16 @@ app.get('/allcontacts/sortbydate', contact.findAllindateorder);
 app.post('/pay', pay.pay);
 
 
+//Follow
+app.get('/:email/follower', follow.findUserFollower);
+
+app.get('/userfollow/:id', follow.findOne);
+
+app.post('/follow',follow.addFollower);
+
+app.delete('/follow/:id', follow.deleteFollow);
+
+
 //User
 app.get('/users', users.findAllusers);
 
@@ -132,6 +145,8 @@ app.get('/:email/user', users.findOne);
 app.get('/find/:username/user', users.findOneByname);
 
 app.put('/currentuser/:id/follow', users.incrementFollow);
+
+app.put('/currentuser/:id/notfollow', users.reduceFollow);
 
 app.post('/users',users.addUser);
 
@@ -153,6 +168,13 @@ app.post('/updatestatus', order.setOrderStatus);
 app.get('/orderlist/:pageSize/:currentPage/:username', order.findUserOrderAll);
 
 app.get('/ordersearch/:pageSize/:currentPage/:keyword', order.fuzzySearch)
+
+// shopping_car
+app.post('/addshoppingcar', shoppingCar.addShoppingCar)
+
+app.get('/shoppingcarlist/:id', shoppingCar.shoppingCartList)
+
+app.post('/deleshopping', shoppingCar.removeShopping)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

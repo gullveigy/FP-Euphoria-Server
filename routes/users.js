@@ -3,7 +3,7 @@ let router = express.Router();
 let mongoose = require('mongoose');
 var Users = require('../models/users');
 var fs = require("fs");
-var formidable = require("formidable"); 
+var formidable = require("formidable");
 var path = require('path');
 
 var mongodbUri ='mongodb://users:users777@ds247430.mlab.com:47430/seesawforwhat';
@@ -101,6 +101,25 @@ router.incrementFollow = (req, res) => {
     });
 };
 
+
+
+router.reduceFollow = (req, res) => {
+
+    Users.findById(req.params.id, function(err,user) {
+        if (err)
+            res.json({ message: 'User NOT Found!', errmsg : err } );
+        else {
+            user.followers -= 1;
+            user.save(function (err) {
+                if (err)
+                    res.json({ message: 'User not cancel Followed!', errmsg : err } );
+                else
+                    res.json({ message: 'User Successfully cancel Followed!', data: user });
+            });
+        }
+    });
+};
+
 router.uploadAvatarUrl = (req, res) => {
     res.setHeader('Content-Type', 'application/json');
 
@@ -132,7 +151,7 @@ router.uploadAvatarUrl = (req, res) => {
             }
         });
 
-        let updates = {$set: {avatar: path.basename(files.avatar.path)}}; 
+        let updates = {$set: {avatar: path.basename(files.avatar.path)}};
         Users.findByIdAndUpdate(conditions,updates, {new: true}, function( error, data ){
             console.log( data )
             if (error) {
@@ -140,9 +159,9 @@ router.uploadAvatarUrl = (req, res) => {
                 res.json({ message: 'No UserId!', errmsg : error } );
 
             } else {
-                console.error("更新成功")
+                console.error("Upload Successfully!")
                 res.json({ message: 'Upload avatar success!', data: data });
-            }          
+            }
         });
     });
 

@@ -183,7 +183,7 @@ describe('Discomments', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(3);
+                    expect(res.body.length).to.equal(4);
                     let result = _.map(res.body, (discomment) => {
                         return { username: discomment.username,
                             upvotes: discomment.upvotes }
@@ -191,6 +191,7 @@ describe('Discomments', function (){
                     expect(result).to.include( { username: 'V', upvotes: 3 });
                     expect(result).to.include( { username: 'Suga', upvotes: 1 });
                     expect(result).to.include( { username: 'RM', upvotes: 0 });
+                    expect(result).to.include( { username: 'Agust D', upvotes: 0 });
                     done();
                 });
 
@@ -239,12 +240,13 @@ describe('Discomments', function (){
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(3);
+                    expect(res.body.length).to.equal(4);
                     let result = _.map(res.body, (discomment) => {
                         return { username: discomment.username,
                             upvotes: discomment.upvotes }
                     });
-                    expect(result).to.include( { username: 'RM', upvotes: 0 },
+                    expect(result).to.include( { username: 'Agust D', upvotes: 0 },
+                                               { username: 'RM', upvotes: 0 },
                                                { username:'Suga', upvotes:1},
                                                { username:'V', upvotes:3});
                     //expect(result).to.include( { username: 'Suga', upvotes: 1 });

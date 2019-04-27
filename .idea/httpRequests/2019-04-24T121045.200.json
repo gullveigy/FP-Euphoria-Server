@@ -1,0 +1,18 @@
+{
+  "message": "Follower NOT Added!",
+  "errmsg": {
+    "errors": {
+      "email": {
+        "message": "Cast to Object failed for value \"1804094745\" at path \"email\"",
+        "name": "CastError",
+        "stringValue": "\"1804094745\"",
+        "kind": "Object",
+        "value": "1804094745",
+        "path": "email"
+      }
+    },
+    "_message": "Follow validation failed",
+    "message": "Follow validation failed: email: Cast to Object failed for value \"1804094745\" at path \"email\"",
+    "name": "ValidationError"
+  }
+}

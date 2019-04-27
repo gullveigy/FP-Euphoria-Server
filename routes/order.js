@@ -7,7 +7,7 @@ let randomNumber = require('../utils/util.js')
 
 let mongodbUri = 'mongodb://admins:admins777@ds247430.mlab.com:47430/seesawforwhat';
 mongoose.connect(mongodbUri);
-
+ 
 
 let db = mongoose.connection;
 
@@ -30,13 +30,10 @@ router.createOrder = (req, res) => {                                            
     order.email = req.body.email;
     order.phone = req.body.phone;
     order.address = req.body.address;
-    order.bookname = req.body.bookname;
-    order.bookcover = req.body.bookcover;
-    order.authors = req.body.authors;
-    order.price = req.body.price;
     order.orderid = randomNumber();
     order.status = 0;
     order.userid = req.body.userid;
+    order.bookList = req.body.bookList;
 
     order.save(function(err) {
         if (err)
@@ -113,7 +110,7 @@ router.fuzzySearch = (req, res) => {
         if (err) {
           console.log(err)
         } else {
-             Order.find(_filter).limit(pageSize) 
+            Order.find(_filter).limit(pageSize) 
             .sort({'_id': -1}) 
             .skip(skipnum)
             .exec(function (err, order) { 

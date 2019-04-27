@@ -1,3 +1,113 @@
+PUT http://localhost:3000/currentuser/5c76dadfacee55353cd72d10/notfollow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745@qq.com","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-24T033835.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745@qq.com","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-24T121159.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745@qq.com","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-24T121120.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745@qq.com","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-24T121116.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-24T121045.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-23T115039.200.json
+
+###
+
+DELETE http://localhost:3000/follow/5cbe3cc2a89c9c3ad078ddbf
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Ying","email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-23T061549.200.json
+
+###
+
+GET http://localhost:3000/userfollow/5cbe3cc2a89c9c3ad078ddbf
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Ying","email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-23T061529.200.json
+
+###
+
+GET http://localhost:3000/1804094745/follower
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Ying","email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-23T061513.200.json
+
+###
+
+POST http://localhost:3000/follow
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{"username":"Ying","email":"1804094745","followername":"Suga","followeremail":"1666298161@qq.com"}
+
+<> 2019-04-23T061426.200.json
+
+###
+
 GET http://localhost:3000/find/Agust%20D/user
 Accept: */*
 Cache-Control: no-cache
@@ -419,116 +529,6 @@ Content-Type: application/json
 {"username":"Agust D","email":"177177177@qq.com","booklistname":"Proud @ Prejudice","date":"","upvotes":0}
 
 <> 2019-03-03T032759.200.json
-
-###
-
-POST http://localhost:3000/booklistdir
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","email":"177177177@qq.com","booklistname":"Proud @ Prejudice","date":"","upvotes":0}
-
-<> 2019-03-03T025221.200.json
-
-###
-
-POST http://localhost:3000/booklistdir
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","email":"177177177@qq.com","booklistname":"Trivia: SeeSaw","date":"","upvotes":0}
-
-<> 2019-03-03T025115.200.json
-
-###
-
-POST http://localhost:3000/booklistdir
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","email":"177177177@qq.com","booklistname":"Love Maze","date":"","upvotes":0}
-
-<> 2019-03-03T025018.200.json
-
-###
-
-POST http://localhost:3000/booklistdir
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","email":"177177177@qq.com","booklilstname":"Love Maze","date":"","upvotes":0}
-
-<> 2019-03-03T024907.200.json
-
-###
-
-POST http://localhost:3000/booklistdir
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","email":"177177177@qq.com","booklilstname":"Love Maze","date":"","upvotes":0}
-
-<> 2019-03-03T024712.200.json
-
-###
-
-GET http://localhost:3000/userdiscussions/177177177@qq.com
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","bookname":"Wings","title":"Wings Tour","content":"You can call me artist (artist) You can call me idol (idol) No matter what you call me I don’t care I’m proud of it (proud it) I’m free (free) No more irony (irony) Cuz I was always just me.They point fingers at me But I don’t care at all Whatever the reason for your criticism is I know what I am (I know what I am) I know what I want (I know what I want) I never gon’ change (I never gon' change) I never gon’ trade (Trade off)","date":"","upvotes":0}
-
-<> 2019-03-03T020110.200.json
-
-###
-
-GET http://localhost:3000/userdiscussions/Agust%20D
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","bookname":"Wings","title":"Wings Tour","content":"You can call me artist (artist) You can call me idol (idol) No matter what you call me I don’t care I’m proud of it (proud it) I’m free (free) No more irony (irony) Cuz I was always just me.They point fingers at me But I don’t care at all Whatever the reason for your criticism is I know what I am (I know what I am) I know what I want (I know what I want) I never gon’ change (I never gon' change) I never gon’ trade (Trade off)","date":"","upvotes":0}
-
-<> 2019-03-03T014926.200.json
-
-###
-
-POST http://localhost:3000/discussions
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","bookname":"Wings","title":"Wings Tour","content":"You can call me artist (artist) You can call me idol (idol) No matter what you call me I don’t care I’m proud of it (proud it) I’m free (free) No more irony (irony) Cuz I was always just me.They point fingers at me But I don’t care at all Whatever the reason for your criticism is I know what I am (I know what I am) I know what I want (I know what I want) I never gon’ change (I never gon' change) I never gon’ trade (Trade off)","date":"","upvotes":0}
-
-<> 2019-03-03T011749.200.json
-
-###
-
-POST http://localhost:3000/discussions
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Agust D","bookname":"Wings","content":"You are the sunlight that rose again in my life A reincarnation of my childhood dreams I don’t know what this emotion is If this place is also inside a dream  This dream is a blue mirage in the desert A priori deep inside of me I’m so happy, I can’t breathe My surroundings are getting more and more transparent  I hear the far-away ocean Across the dream, over the horizon I’m going to the place that’s getting clearer Take my hands now","date":"","upvotes":0}
-
-<> 2019-03-03T011340.200.json
-
-###
-
-GET http://localhost:3000/users
-Accept: */*
-Cache-Control: no-cache
-Content-Type: application/json
-
-{"username":"Yy","email":"1114094745@qq.com","password":"19970506","usertype":"common"}
-
-<> 2019-02-28T023853.200.json
 
 ###
 

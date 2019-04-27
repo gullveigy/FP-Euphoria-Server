@@ -13,6 +13,7 @@ describe('Booklistdirs', function (){
         it('should return confirmation message and update database', function(done) {
             let booklistdir = {
                 username: 'RM1',
+                email: '1884094745@qq/com',
                 booklistname: 'Save Me' ,
                 date:'',
                 upvotes:0

@@ -1,0 +1,11 @@
+{
+  "message": "Follower Successfully Added!",
+  "data": {
+    "_id": "5cbe3cc2a89c9c3ad078ddbf",
+    "username": "Ying",
+    "email": "1804094745",
+    "followername": "Suga",
+    "followeremail": "1666298161@qq.com",
+    "__v": 0
+  }
+}
